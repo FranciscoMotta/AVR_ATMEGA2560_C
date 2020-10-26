@@ -15,7 +15,9 @@ int main(void)
     {
 		int z; /* Creamos una variable del tipo caracter sin signo */
 		DDRB = 0XFF ; /* Ponemos a todo el puerto B como salida */
-		PORTB = 0XFF;
+		for (z = 0 ; z <= 255 ; z++) {
+			PORTB = z;
+		}
 	}
 	return 0;
 }
