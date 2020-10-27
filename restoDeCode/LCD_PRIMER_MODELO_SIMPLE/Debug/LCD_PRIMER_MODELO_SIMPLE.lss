@@ -166,8 +166,8 @@ Disassembly of section .text:
 #define ENABLE 1
 #define RS 0
 
-void modoCaracter (void) {
-	PORTC |= (1 << RS);
+void modoCaracter (void) { //PONEMOS AL LCD EN MODO CARACTER PARA MOSTRAR EL MENSAJE
+	PORTC |= (1 << RS); //PONEMOS AL PIN 0 COMO 1 
   fa:	40 9a       	sbi	0x08, 0	; 8
 	#else
 		//round up by default
@@ -187,8 +187,8 @@ void modoCaracter (void) {
 	_delay_ms(3);
 }
 
-void modoComando (void){
-	PORTC &= ~ (1 << RS);
+void modoComando (void){ //PONEMOS AL LCD EN MODO COMANDO PARA CONFIGURAR SUS CARACTERÍSTICAS
+	PORTC &= ~ (1 << RS); //PONEMOS AL PIN 0 COMO 0
  10a:	40 98       	cbi	0x08, 0	; 8
  10c:	8f ed       	ldi	r24, 0xDF	; 223
  10e:	9e e2       	ldi	r25, 0x2E	; 46
@@ -202,7 +202,7 @@ void modoComando (void){
 	_delay_ms(3);
 }
 
-void tiempoEnable (void){
+void tiempoEnable (void){ //HACEMOS UNA FUNCIÓN PARA PODER CONTROLAR EL ENABLE
 	PORTC |= (1 << ENABLE);
  11a:	41 9a       	sbi	0x08, 1	; 8
  11c:	8f e3       	ldi	r24, 0x3F	; 63
@@ -238,7 +238,7 @@ int main(void)
  146:	de bf       	out	0x3e, r29	; 62
  148:	0f be       	out	0x3f, r0	; 63
  14a:	cd bf       	out	0x3d, r28	; 61
-	unsigned char dataConf[4] = {0x01, 0x38, 0x06, 0x0c};
+	unsigned char dataConf[4] = {0x01, 0x38, 0x06, 0x0c}; //CREAMOS UN ARREGLO DE DATOS DE CONFIGURACIÓN
  14c:	81 e0       	ldi	r24, 0x01	; 1
  14e:	89 83       	std	Y+1, r24	; 0x01
  150:	88 e3       	ldi	r24, 0x38	; 56
@@ -247,7 +247,7 @@ int main(void)
  156:	8b 83       	std	Y+3, r24	; 0x03
  158:	8c e0       	ldi	r24, 0x0C	; 12
  15a:	8c 83       	std	Y+4, r24	; 0x04
-	unsigned char textmat[15] = {'H','O','L','A',' ','A',' ','T','O','D','O','S'};
+	unsigned char textmat[15] = {'H','O','L','A',' ','A',' ','T','O','D','O','S'}; //CREAMOS UN ARREGLO PARA EL MENSAJE A MOSTRAR
  15c:	8e 01       	movw	r16, r28
  15e:	0b 5f       	subi	r16, 0xFB	; 251
  160:	1f 4f       	sbci	r17, 0xFF	; 255
@@ -276,7 +276,7 @@ int main(void)
  18e:	8f 87       	std	Y+15, r24	; 0x0f
  190:	83 e5       	ldi	r24, 0x53	; 83
  192:	88 8b       	std	Y+16, r24	; 0x10
-	int counterLocal = 0;
+	int counterLocal = 0; //UN CONTADOR PARA SACAR LOS DATOS DE CADA ARREGLO
 	DDRB = 0XFF;
  194:	8f ef       	ldi	r24, 0xFF	; 255
  196:	84 b9       	out	0x04, r24	; 4
