@@ -9,6 +9,8 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "lcdPrimeraInterfaz", "lcdPr
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ejercicioCapSiete", "ejercicioCapSiete\ejercicioCapSiete.cproj", "{E75636B3-4964-4A19-9F46-37EEB13CB6A7}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "LCD_PRIMER_MODELO_SIMPLE", "LCD_PRIMER_MODELO_SIMPLE\LCD_PRIMER_MODELO_SIMPLE.cproj", "{6E0A3DB8-DFEF-48E3-974E-4E657561316E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -27,6 +29,10 @@ Global
 		{E75636B3-4964-4A19-9F46-37EEB13CB6A7}.Debug|AVR.Build.0 = Debug|AVR
 		{E75636B3-4964-4A19-9F46-37EEB13CB6A7}.Release|AVR.ActiveCfg = Release|AVR
 		{E75636B3-4964-4A19-9F46-37EEB13CB6A7}.Release|AVR.Build.0 = Release|AVR
+		{6E0A3DB8-DFEF-48E3-974E-4E657561316E}.Debug|AVR.ActiveCfg = Debug|AVR
+		{6E0A3DB8-DFEF-48E3-974E-4E657561316E}.Debug|AVR.Build.0 = Debug|AVR
+		{6E0A3DB8-DFEF-48E3-974E-4E657561316E}.Release|AVR.ActiveCfg = Release|AVR
+		{6E0A3DB8-DFEF-48E3-974E-4E657561316E}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
