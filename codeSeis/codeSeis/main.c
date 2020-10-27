@@ -22,7 +22,7 @@ int main(void)
     {
 		PORTB = 0XAA;
 		_delay_ms(1000);
-		PORTB = 0XBB;
+		PORTB = 0X55;
 		_delay_ms(1000);
     }
 	return 0;
