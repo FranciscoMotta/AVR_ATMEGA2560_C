@@ -205,17 +205,17 @@ void modoComando (void){ //PONEMOS AL LCD EN MODO COMANDO PARA CONFIGURAR SUS CA
 void tiempoEnable (void){ //HACEMOS UNA FUNCIÓN PARA PODER CONTROLAR EL ENABLE
 	PORTC |= (1 << ENABLE);
  11a:	41 9a       	sbi	0x08, 1	; 8
- 11c:	8f e3       	ldi	r24, 0x3F	; 63
- 11e:	9f e1       	ldi	r25, 0x1F	; 31
+ 11c:	8f e9       	ldi	r24, 0x9F	; 159
+ 11e:	9f e0       	ldi	r25, 0x0F	; 15
  120:	01 97       	sbiw	r24, 0x01	; 1
  122:	f1 f7       	brne	.-4      	; 0x120 <tiempoEnable+0x6>
  124:	00 c0       	rjmp	.+0      	; 0x126 <tiempoEnable+0xc>
  126:	00 00       	nop
-	_delay_ms(2);
+	_delay_ms(1);
 	PORTC &= ~ (1 << ENABLE);
  128:	41 98       	cbi	0x08, 1	; 8
- 12a:	8f e3       	ldi	r24, 0x3F	; 63
- 12c:	9f e1       	ldi	r25, 0x1F	; 31
+ 12a:	8f e9       	ldi	r24, 0x9F	; 159
+ 12c:	9f e0       	ldi	r25, 0x0F	; 15
  12e:	01 97       	sbiw	r24, 0x01	; 1
  130:	f1 f7       	brne	.-4      	; 0x12e <tiempoEnable+0x14>
  132:	00 c0       	rjmp	.+0      	; 0x134 <tiempoEnable+0x1a>
@@ -223,7 +223,7 @@ void tiempoEnable (void){ //HACEMOS UNA FUNCIÓN PARA PODER CONTROLAR EL ENABLE
  136:	08 95       	ret
 
 00000138 <main>:
-	_delay_ms(2);
+	_delay_ms(1);
 }
 
 int main(void)

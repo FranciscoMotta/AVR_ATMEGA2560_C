@@ -25,9 +25,9 @@ void modoComando (void){ //PONEMOS AL LCD EN MODO COMANDO PARA CONFIGURAR SUS CA
 
 void tiempoEnable (void){ //HACEMOS UNA FUNCIÓN PARA PODER CONTROLAR EL ENABLE
 	PORTC |= (1 << ENABLE);
-	_delay_ms(2);
+	_delay_ms(1);
 	PORTC &= ~ (1 << ENABLE);
-	_delay_ms(2);
+	_delay_ms(1);
 }
 
 int main(void)
