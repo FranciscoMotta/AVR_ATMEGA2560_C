@@ -1,0 +1,470 @@
+
+LCD_INTERFAZ_SIMPLE_BOTONES.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800200  00800200  0000029e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000024a  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  0000029e  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000002d0  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000048  00000000  00000000  00000310  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000f33  00000000  00000000  00000358  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000c87  00000000  00000000  0000128b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000491  00000000  00000000  00001f12  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000094  00000000  00000000  000023a4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000637  00000000  00000000  00002438  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000264  00000000  00000000  00002a6f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000038  00000000  00000000  00002cd3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	71 c0       	rjmp	.+226    	; 0xe4 <__ctors_end>
+   2:	00 00       	nop
+   4:	79 c0       	rjmp	.+242    	; 0xf8 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	77 c0       	rjmp	.+238    	; 0xf8 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	75 c0       	rjmp	.+234    	; 0xf8 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	73 c0       	rjmp	.+230    	; 0xf8 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	71 c0       	rjmp	.+226    	; 0xf8 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	6f c0       	rjmp	.+222    	; 0xf8 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	6d c0       	rjmp	.+218    	; 0xf8 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	6b c0       	rjmp	.+214    	; 0xf8 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	69 c0       	rjmp	.+210    	; 0xf8 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	67 c0       	rjmp	.+206    	; 0xf8 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	65 c0       	rjmp	.+202    	; 0xf8 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	63 c0       	rjmp	.+198    	; 0xf8 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	61 c0       	rjmp	.+194    	; 0xf8 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	5f c0       	rjmp	.+190    	; 0xf8 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	5d c0       	rjmp	.+186    	; 0xf8 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	5b c0       	rjmp	.+182    	; 0xf8 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	59 c0       	rjmp	.+178    	; 0xf8 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	57 c0       	rjmp	.+174    	; 0xf8 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	55 c0       	rjmp	.+170    	; 0xf8 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	53 c0       	rjmp	.+166    	; 0xf8 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	51 c0       	rjmp	.+162    	; 0xf8 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	4f c0       	rjmp	.+158    	; 0xf8 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	4d c0       	rjmp	.+154    	; 0xf8 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	4b c0       	rjmp	.+150    	; 0xf8 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	49 c0       	rjmp	.+146    	; 0xf8 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	47 c0       	rjmp	.+142    	; 0xf8 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	45 c0       	rjmp	.+138    	; 0xf8 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	43 c0       	rjmp	.+134    	; 0xf8 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	41 c0       	rjmp	.+130    	; 0xf8 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	3f c0       	rjmp	.+126    	; 0xf8 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	3d c0       	rjmp	.+122    	; 0xf8 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	3b c0       	rjmp	.+118    	; 0xf8 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	39 c0       	rjmp	.+114    	; 0xf8 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	37 c0       	rjmp	.+110    	; 0xf8 <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	35 c0       	rjmp	.+106    	; 0xf8 <__bad_interrupt>
+  8e:	00 00       	nop
+  90:	33 c0       	rjmp	.+102    	; 0xf8 <__bad_interrupt>
+  92:	00 00       	nop
+  94:	31 c0       	rjmp	.+98     	; 0xf8 <__bad_interrupt>
+  96:	00 00       	nop
+  98:	2f c0       	rjmp	.+94     	; 0xf8 <__bad_interrupt>
+  9a:	00 00       	nop
+  9c:	2d c0       	rjmp	.+90     	; 0xf8 <__bad_interrupt>
+  9e:	00 00       	nop
+  a0:	2b c0       	rjmp	.+86     	; 0xf8 <__bad_interrupt>
+  a2:	00 00       	nop
+  a4:	29 c0       	rjmp	.+82     	; 0xf8 <__bad_interrupt>
+  a6:	00 00       	nop
+  a8:	27 c0       	rjmp	.+78     	; 0xf8 <__bad_interrupt>
+  aa:	00 00       	nop
+  ac:	25 c0       	rjmp	.+74     	; 0xf8 <__bad_interrupt>
+  ae:	00 00       	nop
+  b0:	23 c0       	rjmp	.+70     	; 0xf8 <__bad_interrupt>
+  b2:	00 00       	nop
+  b4:	21 c0       	rjmp	.+66     	; 0xf8 <__bad_interrupt>
+  b6:	00 00       	nop
+  b8:	1f c0       	rjmp	.+62     	; 0xf8 <__bad_interrupt>
+  ba:	00 00       	nop
+  bc:	1d c0       	rjmp	.+58     	; 0xf8 <__bad_interrupt>
+  be:	00 00       	nop
+  c0:	1b c0       	rjmp	.+54     	; 0xf8 <__bad_interrupt>
+  c2:	00 00       	nop
+  c4:	19 c0       	rjmp	.+50     	; 0xf8 <__bad_interrupt>
+  c6:	00 00       	nop
+  c8:	17 c0       	rjmp	.+46     	; 0xf8 <__bad_interrupt>
+  ca:	00 00       	nop
+  cc:	15 c0       	rjmp	.+42     	; 0xf8 <__bad_interrupt>
+  ce:	00 00       	nop
+  d0:	13 c0       	rjmp	.+38     	; 0xf8 <__bad_interrupt>
+  d2:	00 00       	nop
+  d4:	11 c0       	rjmp	.+34     	; 0xf8 <__bad_interrupt>
+  d6:	00 00       	nop
+  d8:	0f c0       	rjmp	.+30     	; 0xf8 <__bad_interrupt>
+  da:	00 00       	nop
+  dc:	0d c0       	rjmp	.+26     	; 0xf8 <__bad_interrupt>
+  de:	00 00       	nop
+  e0:	0b c0       	rjmp	.+22     	; 0xf8 <__bad_interrupt>
+	...
+
+000000e4 <__ctors_end>:
+  e4:	11 24       	eor	r1, r1
+  e6:	1f be       	out	0x3f, r1	; 63
+  e8:	cf ef       	ldi	r28, 0xFF	; 255
+  ea:	d1 e2       	ldi	r29, 0x21	; 33
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	00 e0       	ldi	r16, 0x00	; 0
+  f2:	0c bf       	out	0x3c, r16	; 60
+  f4:	31 d0       	rcall	.+98     	; 0x158 <main>
+  f6:	a7 c0       	rjmp	.+334    	; 0x246 <_exit>
+
+000000f8 <__bad_interrupt>:
+  f8:	83 cf       	rjmp	.-250    	; 0x0 <__vectors>
+
+000000fa <modoCaracter>:
+
+#define PRIMER_BOTON 7
+#define SEGUNDO_BOTON 6
+
+void modoCaracter (void) { //PONEMOS AL LCD EN MODO CARACTER PARA MOSTRAR EL MENSAJE
+	PORTC |= (1 << RS); //PONEMOS AL PIN 0 COMO 1 
+  fa:	40 9a       	sbi	0x08, 0	; 8
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  fc:	8f ed       	ldi	r24, 0xDF	; 223
+  fe:	9e e2       	ldi	r25, 0x2E	; 46
+ 100:	01 97       	sbiw	r24, 0x01	; 1
+ 102:	f1 f7       	brne	.-4      	; 0x100 <modoCaracter+0x6>
+ 104:	00 c0       	rjmp	.+0      	; 0x106 <modoCaracter+0xc>
+ 106:	00 00       	nop
+ 108:	08 95       	ret
+
+0000010a <modoComando>:
+	_delay_ms(3);
+}
+
+void modoComando (void){ //PONEMOS AL LCD EN MODO COMANDO PARA CONFIGURAR SUS CARACTERÍSTICAS
+	PORTC &= ~ (1 << RS); //PONEMOS AL PIN 0 COMO 0
+ 10a:	40 98       	cbi	0x08, 0	; 8
+ 10c:	8f ed       	ldi	r24, 0xDF	; 223
+ 10e:	9e e2       	ldi	r25, 0x2E	; 46
+ 110:	01 97       	sbiw	r24, 0x01	; 1
+ 112:	f1 f7       	brne	.-4      	; 0x110 <modoComando+0x6>
+ 114:	00 c0       	rjmp	.+0      	; 0x116 <modoComando+0xc>
+ 116:	00 00       	nop
+ 118:	08 95       	ret
+
+0000011a <tiempoEnable>:
+	_delay_ms(3);
+}
+
+void tiempoEnable (void){ //HACEMOS UNA FUNCIÓN PARA PODER CONTROLAR EL ENABLE
+	PORTC |= (1 << ENABLE);
+ 11a:	41 9a       	sbi	0x08, 1	; 8
+ 11c:	8f e9       	ldi	r24, 0x9F	; 159
+ 11e:	9f e0       	ldi	r25, 0x0F	; 15
+ 120:	01 97       	sbiw	r24, 0x01	; 1
+ 122:	f1 f7       	brne	.-4      	; 0x120 <tiempoEnable+0x6>
+ 124:	00 c0       	rjmp	.+0      	; 0x126 <tiempoEnable+0xc>
+ 126:	00 00       	nop
+	_delay_ms(1);
+	PORTC &= ~ (1 << ENABLE);
+ 128:	41 98       	cbi	0x08, 1	; 8
+ 12a:	8f e9       	ldi	r24, 0x9F	; 159
+ 12c:	9f e0       	ldi	r25, 0x0F	; 15
+ 12e:	01 97       	sbiw	r24, 0x01	; 1
+ 130:	f1 f7       	brne	.-4      	; 0x12e <tiempoEnable+0x14>
+ 132:	00 c0       	rjmp	.+0      	; 0x134 <tiempoEnable+0x1a>
+ 134:	00 00       	nop
+ 136:	08 95       	ret
+
+00000138 <posicion_Linea_Inferior>:
+	_delay_ms(1);
+}
+
+void posicion_Linea_Inferior (int posicion){
+ 138:	cf 93       	push	r28
+ 13a:	c8 2f       	mov	r28, r24
+	modoComando();
+ 13c:	e6 df       	rcall	.-52     	; 0x10a <modoComando>
+	PORTB = 0xC0 + posicion;
+ 13e:	c0 54       	subi	r28, 0x40	; 64
+	tiempoEnable();
+ 140:	c5 b9       	out	0x05, r28	; 5
+ 142:	eb df       	rcall	.-42     	; 0x11a <tiempoEnable>
+}
+ 144:	cf 91       	pop	r28
+ 146:	08 95       	ret
+
+00000148 <posicion_Linea_Superior>:
+
+void posicion_Linea_Superior (int posicion){
+ 148:	cf 93       	push	r28
+ 14a:	c8 2f       	mov	r28, r24
+	modoComando();
+ 14c:	de df       	rcall	.-68     	; 0x10a <modoComando>
+	PORTB = 0x80 + posicion;
+ 14e:	c0 58       	subi	r28, 0x80	; 128
+	tiempoEnable();
+ 150:	c5 b9       	out	0x05, r28	; 5
+ 152:	e3 df       	rcall	.-58     	; 0x11a <tiempoEnable>
+}
+ 154:	cf 91       	pop	r28
+ 156:	08 95       	ret
+
+00000158 <main>:
+
+int main(void)
+{
+ 158:	cf 93       	push	r28
+ 15a:	df 93       	push	r29
+ 15c:	cd b7       	in	r28, 0x3d	; 61
+ 15e:	de b7       	in	r29, 0x3e	; 62
+ 160:	63 97       	sbiw	r28, 0x13	; 19
+ 162:	0f b6       	in	r0, 0x3f	; 63
+ 164:	f8 94       	cli
+ 166:	de bf       	out	0x3e, r29	; 62
+ 168:	0f be       	out	0x3f, r0	; 63
+ 16a:	cd bf       	out	0x3d, r28	; 61
+	unsigned char dataConf[4] = {0x01, 0x38, 0x06, 0x0c}; //CREAMOS UN ARREGLO DE DATOS DE CONFIGURACIÓN
+ 16c:	81 e0       	ldi	r24, 0x01	; 1
+ 16e:	89 83       	std	Y+1, r24	; 0x01
+ 170:	88 e3       	ldi	r24, 0x38	; 56
+ 172:	8a 83       	std	Y+2, r24	; 0x02
+ 174:	86 e0       	ldi	r24, 0x06	; 6
+ 176:	8b 83       	std	Y+3, r24	; 0x03
+ 178:	8c e0       	ldi	r24, 0x0C	; 12
+ 17a:	8c 83       	std	Y+4, r24	; 0x04
+	unsigned char textmat[15] = {'H','O','L','A',' ','A',' ','T','O','D','O','S'}; //CREAMOS UN ARREGLO PARA EL MENSAJE A MOSTRAR
+ 17c:	9f e0       	ldi	r25, 0x0F	; 15
+ 17e:	8e 01       	movw	r16, r28
+ 180:	0b 5f       	subi	r16, 0xFB	; 251
+ 182:	1f 4f       	sbci	r17, 0xFF	; 255
+ 184:	f8 01       	movw	r30, r16
+ 186:	89 2f       	mov	r24, r25
+ 188:	11 92       	st	Z+, r1
+ 18a:	8a 95       	dec	r24
+ 18c:	e9 f7       	brne	.-6      	; 0x188 <main+0x30>
+ 18e:	88 e4       	ldi	r24, 0x48	; 72
+ 190:	8d 83       	std	Y+5, r24	; 0x05
+ 192:	8f e4       	ldi	r24, 0x4F	; 79
+ 194:	8e 83       	std	Y+6, r24	; 0x06
+ 196:	2c e4       	ldi	r18, 0x4C	; 76
+ 198:	2f 83       	std	Y+7, r18	; 0x07
+ 19a:	31 e4       	ldi	r19, 0x41	; 65
+ 19c:	38 87       	std	Y+8, r19	; 0x08
+ 19e:	20 e2       	ldi	r18, 0x20	; 32
+ 1a0:	29 87       	std	Y+9, r18	; 0x09
+ 1a2:	3a 87       	std	Y+10, r19	; 0x0a
+ 1a4:	2b 87       	std	Y+11, r18	; 0x0b
+ 1a6:	24 e5       	ldi	r18, 0x54	; 84
+ 1a8:	2c 87       	std	Y+12, r18	; 0x0c
+ 1aa:	8d 87       	std	Y+13, r24	; 0x0d
+ 1ac:	24 e4       	ldi	r18, 0x44	; 68
+ 1ae:	2e 87       	std	Y+14, r18	; 0x0e
+ 1b0:	8f 87       	std	Y+15, r24	; 0x0f
+ 1b2:	83 e5       	ldi	r24, 0x53	; 83
+ 1b4:	88 8b       	std	Y+16, r24	; 0x10
+	unsigned char numboton[4] = {'1','2','3','4'};
+	int counterLocal = 0; //UN CONTADOR PARA SACAR LOS DATOS DE CADA ARREGLO
+	unsigned char lectorGeneral = 0;
+	DDRB = 0XFF;
+ 1b6:	8f ef       	ldi	r24, 0xFF	; 255
+ 1b8:	84 b9       	out	0x04, r24	; 4
+	DDRC = 0x0F;
+ 1ba:	97 b9       	out	0x07, r25	; 7
+    /* Replace with your application code */
+    while (1) 
+    {
+		//CONFIGURAMOS AL LCD
+		modoComando();
+ 1bc:	a6 df       	rcall	.-180    	; 0x10a <modoComando>
+ 1be:	fe 01       	movw	r30, r28
+ 1c0:	31 96       	adiw	r30, 0x01	; 1
+ 1c2:	7f 01       	movw	r14, r30
+		for (counterLocal = 0 ; counterLocal < 4 ; counterLocal++){
+			PORTB = dataConf[counterLocal];
+ 1c4:	f7 01       	movw	r30, r14
+ 1c6:	81 91       	ld	r24, Z+
+ 1c8:	7f 01       	movw	r14, r30
+			tiempoEnable();
+ 1ca:	85 b9       	out	0x05, r24	; 5
+ 1cc:	a6 df       	rcall	.-180    	; 0x11a <tiempoEnable>
+    /* Replace with your application code */
+    while (1) 
+    {
+		//CONFIGURAMOS AL LCD
+		modoComando();
+		for (counterLocal = 0 ; counterLocal < 4 ; counterLocal++){
+ 1ce:	e0 16       	cp	r14, r16
+ 1d0:	f1 06       	cpc	r15, r17
+ 1d2:	c1 f7       	brne	.-16     	; 0x1c4 <main+0x6c>
+			PORTB = dataConf[counterLocal];
+			tiempoEnable();
+		}
+		//MOSTRAMOS EL MENSAJE
+		posicion_Linea_Superior(2);
+ 1d4:	82 e0       	ldi	r24, 0x02	; 2
+ 1d6:	90 e0       	ldi	r25, 0x00	; 0
+		modoCaracter();
+ 1d8:	b7 df       	rcall	.-146    	; 0x148 <posicion_Linea_Superior>
+ 1da:	8f df       	rcall	.-226    	; 0xfa <modoCaracter>
+ 1dc:	8e 01       	movw	r16, r28
+ 1de:	0b 5f       	subi	r16, 0xFB	; 251
+ 1e0:	1f 4f       	sbci	r17, 0xFF	; 255
+ 1e2:	7e 01       	movw	r14, r28
+ 1e4:	f1 e1       	ldi	r31, 0x11	; 17
+ 1e6:	ef 0e       	add	r14, r31
+ 1e8:	f1 1c       	adc	r15, r1
+		for ( counterLocal = 0 ; counterLocal < 12 ; counterLocal++){
+			PORTB = textmat[counterLocal];
+ 1ea:	f8 01       	movw	r30, r16
+ 1ec:	81 91       	ld	r24, Z+
+ 1ee:	8f 01       	movw	r16, r30
+			tiempoEnable();
+ 1f0:	85 b9       	out	0x05, r24	; 5
+ 1f2:	93 df       	rcall	.-218    	; 0x11a <tiempoEnable>
+			tiempoEnable();
+		}
+		//MOSTRAMOS EL MENSAJE
+		posicion_Linea_Superior(2);
+		modoCaracter();
+		for ( counterLocal = 0 ; counterLocal < 12 ; counterLocal++){
+ 1f4:	0e 15       	cp	r16, r14
+ 1f6:	1f 05       	cpc	r17, r15
+ 1f8:	c1 f7       	brne	.-16     	; 0x1ea <main+0x92>
+			if(lectorGeneral == 0x40){
+				PORTB = numboton[1];
+				tiempoEnable();
+			}
+			if(lectorGeneral == 0x80){
+				PORTB = numboton[2];
+ 1fa:	0f 2e       	mov	r0, r31
+ 1fc:	f3 e3       	ldi	r31, 0x33	; 51
+ 1fe:	ef 2e       	mov	r14, r31
+ 200:	f0 2d       	mov	r31, r0
+			if(lectorGeneral == 0x00){
+				PORTB = numboton[0];
+				tiempoEnable();
+			}
+			if(lectorGeneral == 0x40){
+				PORTB = numboton[1];
+ 202:	0f 2e       	mov	r0, r31
+ 204:	f2 e3       	ldi	r31, 0x32	; 50
+ 206:	ff 2e       	mov	r15, r31
+ 208:	f0 2d       	mov	r31, r0
+		while(1){
+			posicion_Linea_Inferior(7);
+			modoCaracter();
+			lectorGeneral = PINC & 0XC0;
+			if(lectorGeneral == 0x00){
+				PORTB = numboton[0];
+ 20a:	01 e3       	ldi	r16, 0x31	; 49
+			if(lectorGeneral == 0x80){
+				PORTB = numboton[2];
+				tiempoEnable();
+			}
+			if(lectorGeneral == 0xC0){
+				PORTB = numboton[3];
+ 20c:	0f 2e       	mov	r0, r31
+ 20e:	f4 e3       	ldi	r31, 0x34	; 52
+		for ( counterLocal = 0 ; counterLocal < 12 ; counterLocal++){
+			PORTB = textmat[counterLocal];
+			tiempoEnable();
+		}
+		while(1){
+			posicion_Linea_Inferior(7);
+ 210:	df 2e       	mov	r13, r31
+ 212:	f0 2d       	mov	r31, r0
+ 214:	87 e0       	ldi	r24, 0x07	; 7
+			modoCaracter();
+ 216:	90 e0       	ldi	r25, 0x00	; 0
+ 218:	8f df       	rcall	.-226    	; 0x138 <posicion_Linea_Inferior>
+			lectorGeneral = PINC & 0XC0;
+ 21a:	6f df       	rcall	.-290    	; 0xfa <modoCaracter>
+ 21c:	16 b1       	in	r17, 0x06	; 6
+			if(lectorGeneral == 0x00){
+				PORTB = numboton[0];
+ 21e:	10 7c       	andi	r17, 0xC0	; 192
+				tiempoEnable();
+ 220:	19 f4       	brne	.+6      	; 0x228 <main+0xd0>
+ 222:	05 b9       	out	0x05, r16	; 5
+ 224:	7a df       	rcall	.-268    	; 0x11a <tiempoEnable>
+			}
+			if(lectorGeneral == 0x40){
+ 226:	0a c0       	rjmp	.+20     	; 0x23c <main+0xe4>
+				PORTB = numboton[1];
+ 228:	10 34       	cpi	r17, 0x40	; 64
+				tiempoEnable();
+ 22a:	19 f4       	brne	.+6      	; 0x232 <main+0xda>
+ 22c:	f5 b8       	out	0x05, r15	; 5
+			}
+			if(lectorGeneral == 0x80){
+ 22e:	75 df       	rcall	.-278    	; 0x11a <tiempoEnable>
+ 230:	f1 cf       	rjmp	.-30     	; 0x214 <main+0xbc>
+				PORTB = numboton[2];
+ 232:	10 38       	cpi	r17, 0x80	; 128
+				tiempoEnable();
+ 234:	19 f4       	brne	.+6      	; 0x23c <main+0xe4>
+ 236:	e5 b8       	out	0x05, r14	; 5
+ 238:	70 df       	rcall	.-288    	; 0x11a <tiempoEnable>
+			}
+			if(lectorGeneral == 0xC0){
+ 23a:	ec cf       	rjmp	.-40     	; 0x214 <main+0xbc>
+ 23c:	10 3c       	cpi	r17, 0xC0	; 192
+				PORTB = numboton[3];
+ 23e:	51 f7       	brne	.-44     	; 0x214 <main+0xbc>
+				tiempoEnable();
+ 240:	d5 b8       	out	0x05, r13	; 5
+ 242:	6b df       	rcall	.-298    	; 0x11a <tiempoEnable>
+ 244:	e7 cf       	rjmp	.-50     	; 0x214 <main+0xbc>
+
+00000246 <_exit>:
+ 246:	f8 94       	cli
+
+00000248 <__stop_program>:
+ 248:	ff cf       	rjmp	.-2      	; 0x248 <__stop_program>
