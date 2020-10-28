@@ -18,8 +18,8 @@ int main(void)
 	unsigned char lectorPuerto = 0;
 	
     while (1) {
-		lectorPuerto = PINC; //Leemos el puerto y lo guardamos en una variable
-		PORTB = lectorPuerto; //Mostramos por el puerto B lo que está en la variable
+		lectorPuerto = PINC;
+		PORTB = lectorPuerto;
     }
 	return 0;
 }
