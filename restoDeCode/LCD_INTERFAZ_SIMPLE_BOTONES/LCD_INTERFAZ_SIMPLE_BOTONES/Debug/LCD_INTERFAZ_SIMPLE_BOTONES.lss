@@ -168,7 +168,7 @@ Disassembly of section .text:
 
 void modoCaracter (void) { //PONEMOS AL LCD EN MODO CARACTER PARA MOSTRAR EL MENSAJE
 	PORTC |= (1 << RS); //PONEMOS AL PIN 0 COMO 1 
-  fa:	40 9a       	sbi	0x08, 0	; 8
+  fa:	46 9a       	sbi	0x08, 6	; 8
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
@@ -189,7 +189,7 @@ void modoCaracter (void) { //PONEMOS AL LCD EN MODO CARACTER PARA MOSTRAR EL MEN
 
 void modoComando (void){ //PONEMOS AL LCD EN MODO COMANDO PARA CONFIGURAR SUS CARACTERÍSTICAS
 	PORTC &= ~ (1 << RS); //PONEMOS AL PIN 0 COMO 0
- 10a:	40 98       	cbi	0x08, 0	; 8
+ 10a:	46 98       	cbi	0x08, 6	; 8
  10c:	8f ed       	ldi	r24, 0xDF	; 223
  10e:	9e e2       	ldi	r25, 0x2E	; 46
  110:	01 97       	sbiw	r24, 0x01	; 1
@@ -204,7 +204,7 @@ void modoComando (void){ //PONEMOS AL LCD EN MODO COMANDO PARA CONFIGURAR SUS CA
 
 void tiempoEnable (void){ //HACEMOS UNA FUNCIÓN PARA PODER CONTROLAR EL ENABLE
 	PORTC |= (1 << ENABLE);
- 11a:	41 9a       	sbi	0x08, 1	; 8
+ 11a:	47 9a       	sbi	0x08, 7	; 8
  11c:	8f e9       	ldi	r24, 0x9F	; 159
  11e:	9f e0       	ldi	r25, 0x0F	; 15
  120:	01 97       	sbiw	r24, 0x01	; 1
@@ -213,7 +213,7 @@ void tiempoEnable (void){ //HACEMOS UNA FUNCIÓN PARA PODER CONTROLAR EL ENABLE
  126:	00 00       	nop
 	_delay_ms(1);
 	PORTC &= ~ (1 << ENABLE);
- 128:	41 98       	cbi	0x08, 1	; 8
+ 128:	47 98       	cbi	0x08, 7	; 8
  12a:	8f e9       	ldi	r24, 0x9F	; 159
  12c:	9f e0       	ldi	r25, 0x0F	; 15
  12e:	01 97       	sbiw	r24, 0x01	; 1
@@ -280,52 +280,52 @@ int main(void)
  178:	8c e0       	ldi	r24, 0x0C	; 12
  17a:	8c 83       	std	Y+4, r24	; 0x04
 	unsigned char textmat[15] = {'H','O','L','A',' ','A',' ','T','O','D','O','S'}; //CREAMOS UN ARREGLO PARA EL MENSAJE A MOSTRAR
- 17c:	9f e0       	ldi	r25, 0x0F	; 15
- 17e:	8e 01       	movw	r16, r28
- 180:	0b 5f       	subi	r16, 0xFB	; 251
- 182:	1f 4f       	sbci	r17, 0xFF	; 255
+ 17c:	8e 01       	movw	r16, r28
+ 17e:	0b 5f       	subi	r16, 0xFB	; 251
+ 180:	1f 4f       	sbci	r17, 0xFF	; 255
+ 182:	8f e0       	ldi	r24, 0x0F	; 15
  184:	f8 01       	movw	r30, r16
- 186:	89 2f       	mov	r24, r25
- 188:	11 92       	st	Z+, r1
- 18a:	8a 95       	dec	r24
- 18c:	e9 f7       	brne	.-6      	; 0x188 <main+0x30>
- 18e:	88 e4       	ldi	r24, 0x48	; 72
- 190:	8d 83       	std	Y+5, r24	; 0x05
- 192:	8f e4       	ldi	r24, 0x4F	; 79
- 194:	8e 83       	std	Y+6, r24	; 0x06
- 196:	2c e4       	ldi	r18, 0x4C	; 76
- 198:	2f 83       	std	Y+7, r18	; 0x07
- 19a:	31 e4       	ldi	r19, 0x41	; 65
- 19c:	38 87       	std	Y+8, r19	; 0x08
- 19e:	20 e2       	ldi	r18, 0x20	; 32
- 1a0:	29 87       	std	Y+9, r18	; 0x09
- 1a2:	3a 87       	std	Y+10, r19	; 0x0a
- 1a4:	2b 87       	std	Y+11, r18	; 0x0b
- 1a6:	24 e5       	ldi	r18, 0x54	; 84
- 1a8:	2c 87       	std	Y+12, r18	; 0x0c
- 1aa:	8d 87       	std	Y+13, r24	; 0x0d
- 1ac:	24 e4       	ldi	r18, 0x44	; 68
- 1ae:	2e 87       	std	Y+14, r18	; 0x0e
- 1b0:	8f 87       	std	Y+15, r24	; 0x0f
- 1b2:	83 e5       	ldi	r24, 0x53	; 83
- 1b4:	88 8b       	std	Y+16, r24	; 0x10
+ 186:	11 92       	st	Z+, r1
+ 188:	8a 95       	dec	r24
+ 18a:	e9 f7       	brne	.-6      	; 0x186 <main+0x2e>
+ 18c:	88 e4       	ldi	r24, 0x48	; 72
+ 18e:	8d 83       	std	Y+5, r24	; 0x05
+ 190:	8f e4       	ldi	r24, 0x4F	; 79
+ 192:	8e 83       	std	Y+6, r24	; 0x06
+ 194:	9c e4       	ldi	r25, 0x4C	; 76
+ 196:	9f 83       	std	Y+7, r25	; 0x07
+ 198:	21 e4       	ldi	r18, 0x41	; 65
+ 19a:	28 87       	std	Y+8, r18	; 0x08
+ 19c:	90 e2       	ldi	r25, 0x20	; 32
+ 19e:	99 87       	std	Y+9, r25	; 0x09
+ 1a0:	2a 87       	std	Y+10, r18	; 0x0a
+ 1a2:	9b 87       	std	Y+11, r25	; 0x0b
+ 1a4:	94 e5       	ldi	r25, 0x54	; 84
+ 1a6:	9c 87       	std	Y+12, r25	; 0x0c
+ 1a8:	8d 87       	std	Y+13, r24	; 0x0d
+ 1aa:	94 e4       	ldi	r25, 0x44	; 68
+ 1ac:	9e 87       	std	Y+14, r25	; 0x0e
+ 1ae:	8f 87       	std	Y+15, r24	; 0x0f
+ 1b0:	83 e5       	ldi	r24, 0x53	; 83
+ 1b2:	88 8b       	std	Y+16, r24	; 0x10
 	unsigned char numboton[4] = {'1','2','3','4'};
 	int counterLocal = 0; //UN CONTADOR PARA SACAR LOS DATOS DE CADA ARREGLO
 	unsigned char lectorGeneral = 0;
 	DDRB = 0XFF;
- 1b6:	8f ef       	ldi	r24, 0xFF	; 255
- 1b8:	84 b9       	out	0x04, r24	; 4
-	DDRC = 0x0F;
- 1ba:	97 b9       	out	0x07, r25	; 7
+ 1b4:	8f ef       	ldi	r24, 0xFF	; 255
+ 1b6:	84 b9       	out	0x04, r24	; 4
+	DDRC = 0xC0;
+ 1b8:	80 ec       	ldi	r24, 0xC0	; 192
+ 1ba:	87 b9       	out	0x07, r24	; 7
     /* Replace with your application code */
     while (1) 
     {
 		//CONFIGURAMOS AL LCD
 		modoComando();
  1bc:	a6 df       	rcall	.-180    	; 0x10a <modoComando>
- 1be:	fe 01       	movw	r30, r28
- 1c0:	31 96       	adiw	r30, 0x01	; 1
- 1c2:	7f 01       	movw	r14, r30
+ 1be:	ce 01       	movw	r24, r28
+ 1c0:	01 96       	adiw	r24, 0x01	; 1
+ 1c2:	7c 01       	movw	r14, r24
 		for (counterLocal = 0 ; counterLocal < 4 ; counterLocal++){
 			PORTB = dataConf[counterLocal];
  1c4:	f7 01       	movw	r30, r14

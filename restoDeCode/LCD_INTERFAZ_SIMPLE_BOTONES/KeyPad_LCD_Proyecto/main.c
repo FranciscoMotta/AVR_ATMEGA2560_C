@@ -48,9 +48,10 @@ void posicion_Linea_Superior (int posicion){
 int main(void)
 {
 	unsigned char dataConf[4] = {0x01, 0x38, 0x06, 0x0c}; //CREAMOS UN ARREGLO DE DATOS DE CONFIGURACIÓN
-	unsigned char textmat[15] = {'H','O','L','A',' ','A',' ','T','O','D','O','S'}; //CREAMOS UN ARREGLO PARA EL MENSAJE A MOSTRAR
-	unsigned char numboton[4] = {'1','2','3','4'};
+	unsigned char textmat[15] = {'K','E','Y','P','A','D',' ','L','C','D',' ','K'}; //CREAMOS UN ARREGLO PARA EL MENSAJE A MOSTRAR
+	unsigned char numboton[16] = {'7','8','9','%','4','5','6','x','1','2','3','-','o','0','=','+'};
 	int counterLocal = 0; //UN CONTADOR PARA SACAR LOS DATOS DE CADA ARREGLO
+	unsigned char keyPadDataEnable = 0;
 	unsigned char lectorGeneral = 0;
 	DDRB = 0XFF;
 	DDRC = 0xC0;
@@ -71,24 +72,13 @@ int main(void)
 			tiempoEnable();
 		}
 		while(1){
-			posicion_Linea_Inferior(7);
-			modoCaracter();
-			lectorGeneral = PINC & 0XC0;
-			if(lectorGeneral == 0x00){
-				PORTB = numboton[0];
-				tiempoEnable();
-			}
-			if(lectorGeneral == 0x40){
-				PORTB = numboton[1];
-				tiempoEnable();
-			}
-			if(lectorGeneral == 0x80){
-				PORTB = numboton[2];
-				tiempoEnable();
-			}
-			if(lectorGeneral == 0xC0){
-				PORTB = numboton[3];
-				tiempoEnable();
+			keyPadDataEnable = PINC & 0b00010000;
+			if(keyPadDataEnable){
+				lectorGeneral = PINC & 0b00001111;
+				posicion_Linea_Inferior(7);
+				modoCaracter();
+				PORTB = numboton[lectorGeneral];
+				tiempoEnable();			
 			} else {
 			}
 		}
