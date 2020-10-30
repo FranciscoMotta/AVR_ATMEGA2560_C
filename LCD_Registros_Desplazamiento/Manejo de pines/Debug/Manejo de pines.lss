@@ -1,0 +1,424 @@
+
+Manejo de pines.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000010  00800200  0000021c  00000290  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000021c  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000002a0  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000002d0  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000048  00000000  00000000  00000310  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000f6a  00000000  00000000  00000358  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000c6e  00000000  00000000  000012c2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000451  00000000  00000000  00001f30  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000090  00000000  00000000  00002384  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000633  00000000  00000000  00002414  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000357  00000000  00000000  00002a47  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000038  00000000  00000000  00002d9e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	71 c0       	rjmp	.+226    	; 0xe4 <__ctors_end>
+   2:	00 00       	nop
+   4:	86 c0       	rjmp	.+268    	; 0x112 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	84 c0       	rjmp	.+264    	; 0x112 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	82 c0       	rjmp	.+260    	; 0x112 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	80 c0       	rjmp	.+256    	; 0x112 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	7e c0       	rjmp	.+252    	; 0x112 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	7c c0       	rjmp	.+248    	; 0x112 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	7a c0       	rjmp	.+244    	; 0x112 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	78 c0       	rjmp	.+240    	; 0x112 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	76 c0       	rjmp	.+236    	; 0x112 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	74 c0       	rjmp	.+232    	; 0x112 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	72 c0       	rjmp	.+228    	; 0x112 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	70 c0       	rjmp	.+224    	; 0x112 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	6e c0       	rjmp	.+220    	; 0x112 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	6c c0       	rjmp	.+216    	; 0x112 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	6a c0       	rjmp	.+212    	; 0x112 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	68 c0       	rjmp	.+208    	; 0x112 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	66 c0       	rjmp	.+204    	; 0x112 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	64 c0       	rjmp	.+200    	; 0x112 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	62 c0       	rjmp	.+196    	; 0x112 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	60 c0       	rjmp	.+192    	; 0x112 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	5e c0       	rjmp	.+188    	; 0x112 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	5c c0       	rjmp	.+184    	; 0x112 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	5a c0       	rjmp	.+180    	; 0x112 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	58 c0       	rjmp	.+176    	; 0x112 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	56 c0       	rjmp	.+172    	; 0x112 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	54 c0       	rjmp	.+168    	; 0x112 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	52 c0       	rjmp	.+164    	; 0x112 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	50 c0       	rjmp	.+160    	; 0x112 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	4e c0       	rjmp	.+156    	; 0x112 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	4c c0       	rjmp	.+152    	; 0x112 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	4a c0       	rjmp	.+148    	; 0x112 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	48 c0       	rjmp	.+144    	; 0x112 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	46 c0       	rjmp	.+140    	; 0x112 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	44 c0       	rjmp	.+136    	; 0x112 <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	42 c0       	rjmp	.+132    	; 0x112 <__bad_interrupt>
+  8e:	00 00       	nop
+  90:	40 c0       	rjmp	.+128    	; 0x112 <__bad_interrupt>
+  92:	00 00       	nop
+  94:	3e c0       	rjmp	.+124    	; 0x112 <__bad_interrupt>
+  96:	00 00       	nop
+  98:	3c c0       	rjmp	.+120    	; 0x112 <__bad_interrupt>
+  9a:	00 00       	nop
+  9c:	3a c0       	rjmp	.+116    	; 0x112 <__bad_interrupt>
+  9e:	00 00       	nop
+  a0:	38 c0       	rjmp	.+112    	; 0x112 <__bad_interrupt>
+  a2:	00 00       	nop
+  a4:	36 c0       	rjmp	.+108    	; 0x112 <__bad_interrupt>
+  a6:	00 00       	nop
+  a8:	34 c0       	rjmp	.+104    	; 0x112 <__bad_interrupt>
+  aa:	00 00       	nop
+  ac:	32 c0       	rjmp	.+100    	; 0x112 <__bad_interrupt>
+  ae:	00 00       	nop
+  b0:	30 c0       	rjmp	.+96     	; 0x112 <__bad_interrupt>
+  b2:	00 00       	nop
+  b4:	2e c0       	rjmp	.+92     	; 0x112 <__bad_interrupt>
+  b6:	00 00       	nop
+  b8:	2c c0       	rjmp	.+88     	; 0x112 <__bad_interrupt>
+  ba:	00 00       	nop
+  bc:	2a c0       	rjmp	.+84     	; 0x112 <__bad_interrupt>
+  be:	00 00       	nop
+  c0:	28 c0       	rjmp	.+80     	; 0x112 <__bad_interrupt>
+  c2:	00 00       	nop
+  c4:	26 c0       	rjmp	.+76     	; 0x112 <__bad_interrupt>
+  c6:	00 00       	nop
+  c8:	24 c0       	rjmp	.+72     	; 0x112 <__bad_interrupt>
+  ca:	00 00       	nop
+  cc:	22 c0       	rjmp	.+68     	; 0x112 <__bad_interrupt>
+  ce:	00 00       	nop
+  d0:	20 c0       	rjmp	.+64     	; 0x112 <__bad_interrupt>
+  d2:	00 00       	nop
+  d4:	1e c0       	rjmp	.+60     	; 0x112 <__bad_interrupt>
+  d6:	00 00       	nop
+  d8:	1c c0       	rjmp	.+56     	; 0x112 <__bad_interrupt>
+  da:	00 00       	nop
+  dc:	1a c0       	rjmp	.+52     	; 0x112 <__bad_interrupt>
+  de:	00 00       	nop
+  e0:	18 c0       	rjmp	.+48     	; 0x112 <__bad_interrupt>
+	...
+
+000000e4 <__ctors_end>:
+  e4:	11 24       	eor	r1, r1
+  e6:	1f be       	out	0x3f, r1	; 63
+  e8:	cf ef       	ldi	r28, 0xFF	; 255
+  ea:	d1 e2       	ldi	r29, 0x21	; 33
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	00 e0       	ldi	r16, 0x00	; 0
+  f2:	0c bf       	out	0x3c, r16	; 60
+
+000000f4 <__do_copy_data>:
+  f4:	12 e0       	ldi	r17, 0x02	; 2
+  f6:	a0 e0       	ldi	r26, 0x00	; 0
+  f8:	b2 e0       	ldi	r27, 0x02	; 2
+  fa:	ec e1       	ldi	r30, 0x1C	; 28
+  fc:	f2 e0       	ldi	r31, 0x02	; 2
+  fe:	00 e0       	ldi	r16, 0x00	; 0
+ 100:	0b bf       	out	0x3b, r16	; 59
+ 102:	02 c0       	rjmp	.+4      	; 0x108 <__do_copy_data+0x14>
+ 104:	07 90       	elpm	r0, Z+
+ 106:	0d 92       	st	X+, r0
+ 108:	a0 31       	cpi	r26, 0x10	; 16
+ 10a:	b1 07       	cpc	r27, r17
+ 10c:	d9 f7       	brne	.-10     	; 0x104 <__do_copy_data+0x10>
+ 10e:	46 d0       	rcall	.+140    	; 0x19c <main>
+ 110:	83 c0       	rjmp	.+262    	; 0x218 <_exit>
+
+00000112 <__bad_interrupt>:
+ 112:	76 cf       	rjmp	.-276    	; 0x0 <__vectors>
+
+00000114 <tiempoEnable>:
+#define clockLCD 0
+#define ENABLE 3
+#define RS 2
+
+void tiempoEnable (void){ //HACEMOS UNA FUNCIÓN PARA PODER CONTROLAR EL ENABLE
+	PORTC |= (1 << clockLCD);
+ 114:	40 9a       	sbi	0x08, 0	; 8
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 116:	8f e9       	ldi	r24, 0x9F	; 159
+ 118:	9f e0       	ldi	r25, 0x0F	; 15
+ 11a:	01 97       	sbiw	r24, 0x01	; 1
+ 11c:	f1 f7       	brne	.-4      	; 0x11a <tiempoEnable+0x6>
+ 11e:	00 c0       	rjmp	.+0      	; 0x120 <tiempoEnable+0xc>
+ 120:	00 00       	nop
+	_delay_ms(1);
+	PORTC &= ~ (1 << clockLCD);
+ 122:	40 98       	cbi	0x08, 0	; 8
+ 124:	8f e9       	ldi	r24, 0x9F	; 159
+ 126:	9f e0       	ldi	r25, 0x0F	; 15
+ 128:	01 97       	sbiw	r24, 0x01	; 1
+ 12a:	f1 f7       	brne	.-4      	; 0x128 <tiempoEnable+0x14>
+ 12c:	00 c0       	rjmp	.+0      	; 0x12e <tiempoEnable+0x1a>
+ 12e:	00 00       	nop
+ 130:	08 95       	ret
+
+00000132 <Modo_Comando>:
+	_delay_ms(1);
+}
+
+void Modo_Comando(void){
+	PORTC &= ~(1 << RS);
+ 132:	42 98       	cbi	0x08, 2	; 8
+ 134:	8f e9       	ldi	r24, 0x9F	; 159
+ 136:	9f e0       	ldi	r25, 0x0F	; 15
+ 138:	01 97       	sbiw	r24, 0x01	; 1
+ 13a:	f1 f7       	brne	.-4      	; 0x138 <Modo_Comando+0x6>
+ 13c:	00 c0       	rjmp	.+0      	; 0x13e <Modo_Comando+0xc>
+ 13e:	00 00       	nop
+ 140:	08 95       	ret
+
+00000142 <Modo_Caracter>:
+	_delay_ms(1);
+}
+
+void Modo_Caracter(void){
+	PORTC |= (1 << RS);
+ 142:	42 9a       	sbi	0x08, 2	; 8
+ 144:	8f e9       	ldi	r24, 0x9F	; 159
+ 146:	9f e0       	ldi	r25, 0x0F	; 15
+ 148:	01 97       	sbiw	r24, 0x01	; 1
+ 14a:	f1 f7       	brne	.-4      	; 0x148 <Modo_Caracter+0x6>
+ 14c:	00 c0       	rjmp	.+0      	; 0x14e <Modo_Caracter+0xc>
+ 14e:	00 00       	nop
+ 150:	08 95       	ret
+
+00000152 <Tiempo_De_Enable>:
+	_delay_ms(1);
+}
+
+void Tiempo_De_Enable (void) {
+	PORTC |= (1 << ENABLE);
+ 152:	43 9a       	sbi	0x08, 3	; 8
+ 154:	8f ed       	ldi	r24, 0xDF	; 223
+ 156:	9e e2       	ldi	r25, 0x2E	; 46
+ 158:	01 97       	sbiw	r24, 0x01	; 1
+ 15a:	f1 f7       	brne	.-4      	; 0x158 <Tiempo_De_Enable+0x6>
+ 15c:	00 c0       	rjmp	.+0      	; 0x15e <Tiempo_De_Enable+0xc>
+ 15e:	00 00       	nop
+	_delay_ms(3);
+	PORTC &= ~(1 << ENABLE);
+ 160:	43 98       	cbi	0x08, 3	; 8
+ 162:	8f ed       	ldi	r24, 0xDF	; 223
+ 164:	9e e2       	ldi	r25, 0x2E	; 46
+ 166:	01 97       	sbiw	r24, 0x01	; 1
+ 168:	f1 f7       	brne	.-4      	; 0x166 <Tiempo_De_Enable+0x14>
+ 16a:	00 c0       	rjmp	.+0      	; 0x16c <Tiempo_De_Enable+0x1a>
+ 16c:	00 00       	nop
+ 16e:	08 95       	ret
+
+00000170 <Desplazador_De_Datos>:
+	_delay_ms(3);
+}
+
+void Desplazador_De_Datos( char dato ){
+ 170:	cf 93       	push	r28
+ 172:	df 93       	push	r29
+ 174:	d8 2f       	mov	r29, r24
+ 176:	c8 e0       	ldi	r28, 0x08	; 8
+		unsigned char registroDesplazamiento = 0;
+		unsigned char contadorDeDesplazamiento = 0;
+		
+		registroDesplazamiento = byteParalelo;
+		for (contadorDeDesplazamiento = 0 ; contadorDeDesplazamiento < 8 ; contadorDeDesplazamiento++){
+			if(registroDesplazamiento & 0x01){
+ 178:	d0 ff       	sbrs	r29, 0
+ 17a:	02 c0       	rjmp	.+4      	; 0x180 <Desplazador_De_Datos+0x10>
+				PORTC |= (1<< pinSerial);
+ 17c:	41 9a       	sbi	0x08, 1	; 8
+ 17e:	01 c0       	rjmp	.+2      	; 0x182 <Desplazador_De_Datos+0x12>
+				//REGISTRO ES EL PORTX -> A,B,C,D,E,F,G,H
+				// << # >> # DESPLAZAR UN BIT
+				// PORTB = (1 << 5) = (0B00100000) PORTCbits.RC5 
+				//suma = suma or (1 << pinSerial) 
+				} else {
+				PORTC &= ~(1 << pinSerial);
+ 180:	41 98       	cbi	0x08, 1	; 8
+				// PORTC = PORTC & ~(1 << pinSerial)
+			}
+			tiempoEnable();
+ 182:	c8 df       	rcall	.-112    	; 0x114 <tiempoEnable>
+ 184:	8f e9       	ldi	r24, 0x9F	; 159
+ 186:	9f e0       	ldi	r25, 0x0F	; 15
+ 188:	01 97       	sbiw	r24, 0x01	; 1
+ 18a:	f1 f7       	brne	.-4      	; 0x188 <Desplazador_De_Datos+0x18>
+ 18c:	00 c0       	rjmp	.+0      	; 0x18e <Desplazador_De_Datos+0x1e>
+ 18e:	00 00       	nop
+			_delay_ms(1);
+			registroDesplazamiento = registroDesplazamiento >> 1;
+ 190:	d6 95       	lsr	r29
+ 192:	c1 50       	subi	r28, 0x01	; 1
+		unsigned char byteParalelo = dato;
+		unsigned char registroDesplazamiento = 0;
+		unsigned char contadorDeDesplazamiento = 0;
+		
+		registroDesplazamiento = byteParalelo;
+		for (contadorDeDesplazamiento = 0 ; contadorDeDesplazamiento < 8 ; contadorDeDesplazamiento++){
+ 194:	89 f7       	brne	.-30     	; 0x178 <Desplazador_De_Datos+0x8>
+			}
+			tiempoEnable();
+			_delay_ms(1);
+			registroDesplazamiento = registroDesplazamiento >> 1;
+		}	
+}
+ 196:	df 91       	pop	r29
+ 198:	cf 91       	pop	r28
+ 19a:	08 95       	ret
+
+0000019c <main>:
+
+int main(void){
+ 19c:	cf 93       	push	r28
+ 19e:	df 93       	push	r29
+ 1a0:	cd b7       	in	r28, 0x3d	; 61
+ 1a2:	de b7       	in	r29, 0x3e	; 62
+ 1a4:	63 97       	sbiw	r28, 0x13	; 19
+ 1a6:	0f b6       	in	r0, 0x3f	; 63
+ 1a8:	f8 94       	cli
+ 1aa:	de bf       	out	0x3e, r29	; 62
+ 1ac:	0f be       	out	0x3f, r0	; 63
+ 1ae:	cd bf       	out	0x3d, r28	; 61
+	DDRC = 0X0F;
+ 1b0:	8f e0       	ldi	r24, 0x0F	; 15
+ 1b2:	87 b9       	out	0x07, r24	; 7
+	//Areglos para el manejo del LCD
+		
+	unsigned char datosConf[4] = {0x01, 0x38,0x0C, 0X06};
+ 1b4:	81 e0       	ldi	r24, 0x01	; 1
+ 1b6:	89 83       	std	Y+1, r24	; 0x01
+ 1b8:	88 e3       	ldi	r24, 0x38	; 56
+ 1ba:	8a 83       	std	Y+2, r24	; 0x02
+ 1bc:	8c e0       	ldi	r24, 0x0C	; 12
+ 1be:	8b 83       	std	Y+3, r24	; 0x03
+ 1c0:	86 e0       	ldi	r24, 0x06	; 6
+ 1c2:	8c 83       	std	Y+4, r24	; 0x04
+	unsigned char mensajeLcd[15] = {'H','O','L','A', ' ', 'L','C','D',' ','C','O','N',' ','F','F'};
+ 1c4:	8f e0       	ldi	r24, 0x0F	; 15
+ 1c6:	e0 e0       	ldi	r30, 0x00	; 0
+ 1c8:	f2 e0       	ldi	r31, 0x02	; 2
+ 1ca:	de 01       	movw	r26, r28
+ 1cc:	15 96       	adiw	r26, 0x05	; 5
+ 1ce:	01 90       	ld	r0, Z+
+ 1d0:	0d 92       	st	X+, r0
+ 1d2:	8a 95       	dec	r24
+ 1d4:	e1 f7       	brne	.-8      	; 0x1ce <main+0x32>
+		
+	int contador_Local = 0;
+    /* Replace with your application code */
+    while (1){
+		Modo_Comando();
+ 1d6:	ad df       	rcall	.-166    	; 0x132 <Modo_Comando>
+ 1d8:	8e 01       	movw	r16, r28
+ 1da:	0f 5f       	subi	r16, 0xFF	; 255
+ 1dc:	1f 4f       	sbci	r17, 0xFF	; 255
+ 1de:	7e 01       	movw	r14, r28
+ 1e0:	85 e0       	ldi	r24, 0x05	; 5
+ 1e2:	e8 0e       	add	r14, r24
+ 1e4:	f1 1c       	adc	r15, r1
+		for(contador_Local = 0; contador_Local < 4 ; contador_Local ++){
+			Desplazador_De_Datos(datosConf[contador_Local]);
+ 1e6:	f8 01       	movw	r30, r16
+ 1e8:	81 91       	ld	r24, Z+
+ 1ea:	8f 01       	movw	r16, r30
+			Tiempo_De_Enable();	
+ 1ec:	c1 df       	rcall	.-126    	; 0x170 <Desplazador_De_Datos>
+ 1ee:	b1 df       	rcall	.-158    	; 0x152 <Tiempo_De_Enable>
+		
+	int contador_Local = 0;
+    /* Replace with your application code */
+    while (1){
+		Modo_Comando();
+		for(contador_Local = 0; contador_Local < 4 ; contador_Local ++){
+ 1f0:	0e 15       	cp	r16, r14
+ 1f2:	1f 05       	cpc	r17, r15
+			Desplazador_De_Datos(datosConf[contador_Local]);
+			Tiempo_De_Enable();	
+		}
+		Modo_Caracter();
+ 1f4:	c1 f7       	brne	.-16     	; 0x1e6 <main+0x4a>
+ 1f6:	a5 df       	rcall	.-182    	; 0x142 <Modo_Caracter>
+ 1f8:	8e 01       	movw	r16, r28
+ 1fa:	0b 5f       	subi	r16, 0xFB	; 251
+ 1fc:	1f 4f       	sbci	r17, 0xFF	; 255
+ 1fe:	7e 01       	movw	r14, r28
+ 200:	f4 e1       	ldi	r31, 0x14	; 20
+ 202:	ef 0e       	add	r14, r31
+		for (contador_Local = 0 ; contador_Local < 15 ; contador_Local ++){
+			Desplazador_De_Datos(mensajeLcd[contador_Local]);
+ 204:	f1 1c       	adc	r15, r1
+ 206:	f8 01       	movw	r30, r16
+ 208:	81 91       	ld	r24, Z+
+ 20a:	8f 01       	movw	r16, r30
+			Tiempo_De_Enable();
+ 20c:	b1 df       	rcall	.-158    	; 0x170 <Desplazador_De_Datos>
+ 20e:	a1 df       	rcall	.-190    	; 0x152 <Tiempo_De_Enable>
+		for(contador_Local = 0; contador_Local < 4 ; contador_Local ++){
+			Desplazador_De_Datos(datosConf[contador_Local]);
+			Tiempo_De_Enable();	
+		}
+		Modo_Caracter();
+		for (contador_Local = 0 ; contador_Local < 15 ; contador_Local ++){
+ 210:	0e 15       	cp	r16, r14
+ 212:	1f 05       	cpc	r17, r15
+ 214:	c1 f7       	brne	.-16     	; 0x206 <main+0x6a>
+ 216:	ff cf       	rjmp	.-2      	; 0x216 <main+0x7a>
+
+00000218 <_exit>:
+ 218:	f8 94       	cli
+
+0000021a <__stop_program>:
+ 21a:	ff cf       	rjmp	.-2      	; 0x21a <__stop_program>
