@@ -14,7 +14,7 @@
 #define ENABLE 3
 #define RS 2
 
-void tiempoEnable (void){ //HACEMOS UNA FUNCIÓN PARA PODER CONTROLAR EL ENABLE
+void tiempoEnable (void){ //HACEMOS UNA FUNCIÃ“N PARA PODER CONTROLAR EL ENABLE
 	PORTC |= (1 << clockLCD);
 	_delay_ms(1);
 	PORTC &= ~ (1 << clockLCD);
@@ -47,15 +47,8 @@ void Desplazador_De_Datos( char dato ){
 		for (contadorDeDesplazamiento = 0 ; contadorDeDesplazamiento < 8 ; contadorDeDesplazamiento++){
 			if(registroDesplazamiento & 0x01){
 				PORTC |= (1<< pinSerial);
-				//PORTBbits.RB0  = 0 ; NO EXISTE!!!!
-				//PUERTO AVR POR LO GENERAL TIENE 8 BITS -> 1 BYTE 
-				//REGISTRO ES EL PORTX -> A,B,C,D,E,F,G,H
-				// << # >> # DESPLAZAR UN BIT
-				// PORTB = (1 << 5) = (0B00100000) PORTCbits.RC5 
-				//suma = suma or (1 << pinSerial) 
 				} else {
 				PORTC &= ~(1 << pinSerial);
-				// PORTC = PORTC & ~(1 << pinSerial)
 			}
 			tiempoEnable();
 			_delay_ms(1);
